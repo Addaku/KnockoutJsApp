@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnockoutJsApp", "KnockoutJsApp\KnockoutJsApp.csproj", "{AA1A7B5C-CE4D-4E58-AA97-D0F1166413DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA1A7B5C-CE4D-4E58-AA97-D0F1166413DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1A7B5C-CE4D-4E58-AA97-D0F1166413DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1A7B5C-CE4D-4E58-AA97-D0F1166413DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1A7B5C-CE4D-4E58-AA97-D0F1166413DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {349C6C91-F349-4E9D-A0D0-F643E2E14275}
+	EndGlobalSection
+EndGlobal

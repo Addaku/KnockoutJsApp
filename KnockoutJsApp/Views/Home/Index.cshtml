@@ -1,0 +1,41 @@
+﻿<script type="text/javascript" src="~/Scripts/knockout-3.4.2.js"></script>
+
+<div>
+    <form data-bind="submit:addItem">
+        Add item: <input type="text" data-bind='value:itemToAdd, valueUpdate: "afterkeydown"' />
+        <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+    </form>
+
+    <p>Grocery List:</p>
+    <select multiple="multiple" height="5" data-bind="options:allItems, selectedOptions:selectedItems"> </select>
+
+    <div>
+        <button data-bind="click: removeSelected, enable: selectedItems().length > 0">Remove</button>
+        <button data-bind="click: sortItems, enable: allItems().length > 1">Sort</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var BetterListModel = function () {
+        this.itemToAdd = ko.observable("");
+        this.allItems = ko.observableArray(["Milk", "Eggs", "Ham", "Cheese"]);
+        this.selectedItems = ko.observableArray(["Milk"]);
+
+        this.addItem = function () {
+            if ((this.itemToAdd() != "") && (this.allItems.indexOf(this.itemToAdd()) < 0))
+                this.allItems.push(this.itemToAdd());
+            this.itemToAdd("");
+        };
+
+        this.removeSelected = function () {
+            this.allItems.removeAll(this.selectedItems());
+            this.selectedItems([]);
+        };
+
+        this.sortItems = function () {
+            this.allItems.sort();
+        };
+    };
+
+    ko.applyBindings(new BetterListModel());
+</script>
